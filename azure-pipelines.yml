@@ -21,13 +21,7 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: VSBuild@1
+- task: SynopsysPolaris@1
   inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: 'Debug'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    polarisService: 'Demo'
+    polarisCommand: 'analyze --coverity-ignore-capture-failure -w'
