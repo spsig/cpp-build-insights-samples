@@ -39,7 +39,7 @@ capture:
 analyze:
   mode: central
   coverity:
-    cov-analyze: ["--all", "--security", "--webapp-security", "--rule", "-concurrency", "--enable-audit-mode"]
+    cov-analyze: ["--all", "--security", "--webapp-security", "--rule", "--concurrency", "--enable-audit-mode"]
 install:
   coverity:
     version: default
